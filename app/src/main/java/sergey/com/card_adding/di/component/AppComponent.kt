@@ -1,12 +1,12 @@
-package sergey.com.getwinner.di.component
+package sergey.com.card_adding.di.component
 
 import android.content.Context
 import dagger.BindsInstance
 import dagger.Component
-import sergey.com.getwinner.GetWinnerApp
-import sergey.com.getwinner.di.module.ActivityModule
-import sergey.com.getwinner.di.module.AppModule
-import sergey.com.getwinner.di.module.NetworkModule
+import sergey.com.card_adding.CardAddingApp
+import sergey.com.card_adding.di.module.ActivityModule
+import sergey.com.card_adding.di.module.AppModule
+import sergey.com.card_adding.di.module.NetworkModule
 import javax.inject.Singleton
 
 @Singleton
@@ -20,5 +20,5 @@ interface AppComponent {
         fun build(): AppComponent
     }
 
-    fun inject(app: GetWinnerApp)
+    fun inject(app: CardAddingApp)
 }

@@ -1,6 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical" android:layout_width="match_parent"
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/colorPrimary"
+            app:title="@string/card_sample"
+            app:titleTextColor="@android:color/white"/>
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/base_background">
+
+            <EditText
+                    android:id="@+id/edit_card_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="50dp"
+                    android:paddingStart="@dimen/edit_text_padding"
+                    android:paddingEnd="@dimen/edit_text_padding"
+                    android:textSize="14sp"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:hint="@string/name_on_card"
+                    android:background="@drawable/bg_edit_text"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                    android:id="@+id/text_card_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/card_number"
+                    android:textAllCaps="true"
+                    android:textSize="16sp"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/edit_card_name"
+                    app:layout_constraintEnd_toEndOf="@+id/edit_card_name"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_card_name" />
+
+            <EditText
+                    android:id="@+id/edit_card_number1"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_marginEnd="@dimen/distance_between_edit_texts"
+                    android:layout_marginTop="8dp"
+                    android:imeOptions="flagNavigateNext"
+                    style="@style/CardNumberEditTextStyle"
+                    app:layout_constraintTop_toBottomOf="@+id/text_card_number"
+                    app:layout_constraintStart_toStartOf="@+id/edit_card_name"
+                    app:layout_constraintEnd_toStartOf="@+id/edit_card_number2"/>
+
+            <EditText
+                    android:id="@+id/edit_card_number2"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_marginEnd="@dimen/distance_between_edit_texts"
+                    style="@style/CardNumberEditTextStyle"
+                    app:layout_constraintTop_toTopOf="@+id/edit_card_number1"
+                    app:layout_constraintStart_toEndOf="@+id/edit_card_number1"
+                    app:layout_constraintEnd_toStartOf="@+id/edit_card_number3"/>
+
+            <EditText
+                    android:id="@+id/edit_card_number3"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_marginEnd="@dimen/distance_between_edit_texts"
+                    style="@style/CardNumberEditTextStyle"
+                    app:layout_constraintTop_toTopOf="@+id/edit_card_number1"
+                    app:layout_constraintStart_toEndOf="@+id/edit_card_number2"
+                    app:layout_constraintEnd_toStartOf="@+id/edit_card_number4"/>
+
+            <EditText
+                    android:id="@+id/edit_card_number4"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    style="@style/CardNumberEditTextStyle"
+                    app:layout_constraintTop_toTopOf="@+id/edit_card_number1"
+                    app:layout_constraintStart_toEndOf="@+id/edit_card_number3"
+                    app:layout_constraintEnd_toEndOf="@+id/edit_card_name"/>
+
+            <EditText
+                    android:id="@+id/edit_expire_date"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="56dp"
+                    android:layout_marginEnd="@dimen/distance_between_edit_texts"
+                    style="@style/ExpireDateEditTextStyle"
+                    android:hint="@string/mm_yy"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_card_number1"
+                    app:layout_constraintStart_toStartOf="@+id/edit_card_number1"
+                    app:layout_constraintEnd_toStartOf="@+id/edit_security_code"
+                    tools:ignore="TextFields" />
+
+            <EditText
+                    android:id="@+id/edit_security_code"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    style="@style/SecurityCodeEditTextStyle"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    app:layout_constraintTop_toTopOf="@+id/edit_expire_date"
+                    app:layout_constraintStart_toEndOf="@+id/edit_expire_date"
+                    app:layout_constraintEnd_toEndOf="@+id/edit_card_name"/>
+
+            <TextView
+                    android:id="@+id/text_expire_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/expire_date"
+                    android:textAllCaps="true"
+                    android:textSize="16sp"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/edit_expire_date"
+                    app:layout_constraintEnd_toEndOf="@+id/edit_expire_date"
+                    app:layout_constraintBottom_toTopOf="@+id/edit_expire_date" />
+
+            <TextView
+                    android:id="@+id/text_security_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/security_code"
+                    android:textAllCaps="true"
+                    android:textSize="16sp"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/edit_security_code"
+                    app:layout_constraintEnd_toEndOf="@+id/edit_security_code"
+                    app:layout_constraintBottom_toTopOf="@+id/edit_security_code" />
+
+            <TextView
+                    android:id="@+id/text_add_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="38dp"
+                    android:layout_marginBottom="16dp"
+                    android:padding="16dp"
+                    android:background="@drawable/bg_add_card_btn"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_expire_date"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintVertical_bias="0"
+                    android:text="@string/add_card"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </LinearLayout>

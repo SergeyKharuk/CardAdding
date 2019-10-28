@@ -1,4 +1,4 @@
-package sergey.com.getwinner.presentation.base
+package sergey.com.card_adding.presentation.base
 
 
 interface BaseView {

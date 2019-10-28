@@ -1,4 +1,7 @@
 package sergey.com.card_adding.presentation.splash
 
-class SplashPresenter {
+import sergey.com.card_adding.presentation.base.BasePresenter
+import javax.inject.Inject
+
+class SplashPresenter @Inject constructor() : BasePresenter<SplashView>() {
 }

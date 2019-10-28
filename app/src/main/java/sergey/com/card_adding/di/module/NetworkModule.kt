@@ -1,16 +1,15 @@
-package sergey.com.getwinner.di.module
+package sergey.com.card_adding.di.module
 
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
-import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
-import sergey.com.getwinner.data.BASE_URL
-import sergey.com.getwinner.data.READ_TIMEOUT
-import sergey.com.getwinner.data.WRITE_TIMEOUT
-import sergey.com.getwinner.data.factory.RxErrorHandlingCallAdapterFactory
-import sergey.com.getwinner.data.service.UserService
+import sergey.com.card_adding.data.BASE_URL
+import sergey.com.card_adding.data.READ_TIMEOUT
+import sergey.com.card_adding.data.WRITE_TIMEOUT
+import sergey.com.card_adding.data.factory.RxErrorHandlingCallAdapterFactory
+import sergey.com.card_adding.data.service.UserService
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 

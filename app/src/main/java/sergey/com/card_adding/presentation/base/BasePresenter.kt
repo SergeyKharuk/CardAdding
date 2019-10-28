@@ -1,4 +1,4 @@
-package sergey.com.getwinner.presentation.base
+package sergey.com.card_adding.presentation.base
 
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
@@ -14,9 +14,12 @@ abstract class BasePresenter<V: BaseView> : Presenter {
     }
 
     override fun detachView() {
-        mCompositeDisposables.clear()
         mView?.clear()
         mView = null
+    }
+
+    override fun destroy() {
+        mCompositeDisposables.clear()
     }
 
     override fun isViewAttached(): Boolean = mView != null

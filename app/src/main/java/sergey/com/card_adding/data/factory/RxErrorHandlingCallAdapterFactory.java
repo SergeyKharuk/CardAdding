@@ -1,4 +1,4 @@
-package sergey.com.getwinner.data.factory;
+package sergey.com.card_adding.data.factory;
 
 import retrofit2.CallAdapter;
 import retrofit2.Retrofit;

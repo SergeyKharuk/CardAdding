@@ -1,4 +1,4 @@
-package sergey.com.card_adding.data.model.pojo
+package sergey.com.card_adding.data.model.request
 
 import com.google.gson.annotations.SerializedName
 

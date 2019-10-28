@@ -1,4 +1,4 @@
-package sergey.com.getwinner.di.scopes
+package sergey.com.card_adding.di.scopes
 
 import javax.inject.Scope
 

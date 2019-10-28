@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="margin_start_ig_profile">16dp</dimen>
+
+    <dimen name="distance_between_edit_texts">8dp</dimen>
+    <dimen name="edit_text_padding">8dp</dimen>
 </resources>

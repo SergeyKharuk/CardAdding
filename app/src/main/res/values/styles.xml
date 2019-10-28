@@ -8,4 +8,30 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="CardNumberEditTextStyle">
+        <item name="android:paddingStart">@dimen/edit_text_padding</item>
+        <item name="android:paddingEnd">@dimen/edit_text_padding</item>
+        <item name="android:maxLength">4</item>
+        <item name="android:inputType">number</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bg_edit_text</item>
+    </style>
+
+    <style name="ExpireDateEditTextStyle">
+        <item name="android:paddingStart">@dimen/edit_text_padding</item>
+        <item name="android:paddingEnd">@dimen/edit_text_padding</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bg_edit_text</item>
+        <item name="android:inputType">number</item>
+        <item name="android:maxLength">5</item>
+    </style>
+
+    <style name="SecurityCodeEditTextStyle">
+        <item name="android:paddingStart">@dimen/edit_text_padding</item>
+        <item name="android:paddingEnd">@dimen/edit_text_padding</item>
+        <item name="android:inputType">text</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bg_edit_text</item>
+    </style>
+
 </resources>

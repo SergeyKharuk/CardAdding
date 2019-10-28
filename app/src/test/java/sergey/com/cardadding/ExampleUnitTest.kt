@@ -1,4 +1,4 @@
-package sergey.com.getwinner
+package sergey.com.cardadding
 
 import org.junit.Test
 

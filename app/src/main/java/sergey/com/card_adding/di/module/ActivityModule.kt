@@ -1,26 +1,21 @@
-package sergey.com.getwinner.di.module
+package sergey.com.card_adding.di.module
 
 import dagger.Module
 import dagger.android.AndroidInjectionModule
 import dagger.android.ContributesAndroidInjector
-import sergey.com.getwinner.di.scopes.ActivityScope
-import sergey.com.getwinner.presentation.comments_list.CommentsListActivity
-import sergey.com.getwinner.presentation.ig_profile.IgProfileActivity
-import sergey.com.getwinner.presentation.splash.SplashActivity
+import sergey.com.card_adding.di.scopes.ActivityScope
+import sergey.com.card_adding.presentation.add_card.AddCardActivity
+import sergey.com.card_adding.presentation.splash.SplashActivity
 
 @Module(includes = [AndroidInjectionModule::class])
 interface ActivityModule {
 
     @ActivityScope
     @ContributesAndroidInjector
-    fun splashActivity(): SplashActivity
+    fun splashActiviy(): SplashActivity
 
     @ActivityScope
     @ContributesAndroidInjector
-    fun igProfileActivity(): IgProfileActivity
-
-    @ActivityScope
-    @ContributesAndroidInjector
-    fun commentsListActivity(): CommentsListActivity
+    fun addCardActivity(): AddCardActivity
 
 }

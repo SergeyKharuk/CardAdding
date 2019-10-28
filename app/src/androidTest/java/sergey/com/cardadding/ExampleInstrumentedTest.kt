@@ -1,4 +1,4 @@
-package sergey.com.getwinner
+package sergey.com.cardadding
 
 import androidx.test.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getTargetContext()
-        assertEquals("sergey.com.getwinner", appContext.packageName)
+        assertEquals("sergey.com.cardadding", appContext.packageName)
     }
 }

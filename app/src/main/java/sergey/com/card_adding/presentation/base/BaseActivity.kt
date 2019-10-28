@@ -1,10 +1,10 @@
-package sergey.com.getwinner.presentation.base
+package sergey.com.card_adding.presentation.base
 
 import android.os.Bundle
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import dagger.android.AndroidInjection
-import sergey.com.getwinner.GetWinnerApp
+import sergey.com.card_adding.CardAddingApp
 import javax.inject.Inject
 
 abstract class BaseActivity<P: Presenter> : AppCompatActivity(), BaseView {
@@ -25,9 +25,10 @@ abstract class BaseActivity<P: Presenter> : AppCompatActivity(), BaseView {
     override fun onDestroy() {
         super.onDestroy()
         presenter.detachView()
+        if (isFinishing) presenter.destroy()
     }
 
     override fun showMessage(msg: String) {
-        (applicationContext as GetWinnerApp).showToast(msg)
+        (applicationContext as CardAddingApp).showToast(msg)
     }
 }
