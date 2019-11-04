@@ -5,14 +5,9 @@ import dagger.android.AndroidInjectionModule
 import dagger.android.ContributesAndroidInjector
 import sergey.com.card_adding.di.scopes.ActivityScope
 import sergey.com.card_adding.presentation.add_card.AddCardActivity
-import sergey.com.card_adding.presentation.splash.SplashActivity
 
 @Module(includes = [AndroidInjectionModule::class])
 interface ActivityModule {
-
-    @ActivityScope
-    @ContributesAndroidInjector
-    fun splashActiviy(): SplashActivity
 
     @ActivityScope
     @ContributesAndroidInjector

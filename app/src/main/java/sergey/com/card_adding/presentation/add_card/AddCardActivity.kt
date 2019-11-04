@@ -1,8 +1,6 @@
 package sergey.com.card_adding.presentation.add_card
 
 import android.app.AlertDialog
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -14,20 +12,13 @@ import sergey.com.card_adding.presentation.common.ExpireDateTextWatcher
 
 class AddCardActivity : BaseActivity<AddCardPresenter>(), AddCardView, ExpireDateTextWatcher.ExpireDateCallbacks {
 
-    companion object {
-        fun getLaunchIntent(context: Context): Intent {
-            val intent = Intent(context, AddCardActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent .FLAG_ACTIVITY_CLEAR_TASK
-            return intent
-        }
-    }
-
     private lateinit var mExpireDateTextWatcher: ExpireDateTextWatcher
 
     override val layoutResource: Int
         get() = R.layout.activity_add_card
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        presenter = AddCardPresenter()
         super.onCreate(savedInstanceState)
         setupViews()
     }
